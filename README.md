@@ -1,43 +1,124 @@
 # MoveInSync Insights
 
-Review analytics dashboard for the MoveInSync FDE case study. Plain HTML/CSS/JS + Chart.js (CDN).
+> A review analytics dashboard built for the MoveInSync FDE case study.  
+> Plain **HTML / CSS / JS** · **Chart.js** (CDN) · zero build step.
 
-## Run
-`fetch()` cannot read local JSON from `file://`, so serve the folder:
-- VS Code: install **Live Server**, right-click `index.html` → *Open with Live Server*; or
-- `python -m http.server 8000` then open http://localhost:8000
+---
 
-## Structure
-- `index.html` – layout and five pages (Dashboard, Review Explorer, Action Plan, Monitoring, About)
-- `css/styles.css` – theme variables (light/dark), responsive layout
-- `js/app.js` – all logic (kept in one file for easy explanation)
-- `data/reviews.json` – `meta`, `categories` (name + suggested action), `reviews`
-- `build_data.py` – optional helper that regenerates the JSON
+## 🚀 Quick Start
 
-## Add reviews
-Append an object to `reviews` in `data/reviews.json`:
-`{"id":"R056","date":"YYYY-MM-DD","stars":1,"text":"...","primaryCategory":"<exact category name>","secondaryTags":[],"severity":"Low|Medium|High","source":"Google Play screenshot","verified":false,"complete":true}`
-Add new categories in the `categories` array; the filters and charts pick them up automatically.
-Use `"complete": false` when text is cut off. Never paraphrase silently.
+`fetch()` cannot read local files from `file://`, so you need a local server:
 
-## Features
-Search, star/date/category filters, live KPIs, 4 charts (trend shows only with ≥3 months of data), paginated table with detail dialog, CSV export of filtered rows, reset, dark mode (saved in localStorage), live-calculated evidence counts on the Action Plan.
+| Method | Command | URL |
+|---|---|---|
+| VS Code Live Server | Right-click `index.html` → *Open with Live Server* | auto-opens |
+| Python | `python -m http.server 8000` | http://localhost:8000 |
 
-## Deploy to GitHub Pages
-1. Create a repo and push this folder (index.html at the root).
-2. Settings → Pages → Source: *Deploy from a branch* → `main` / root → Save.
-3. Open `https://<user>.github.io/<repo>/` after about a minute.
+---
 
-## Main functions (js/app.js)
-- `init()` loads setup, listeners, static pages. `showPage()` switches pages.
-- `getFiltered()` applies every filter; `render()` calls `renderKPIs`, `renderCharts`, `renderTable` with its result.
-- `count()` groups items for charts. `makeChart()` redraws a chart safely.
-- `openDetails()` full review dialog. `exportCSV()` downloads filtered rows.
-- `renderRecs()` builds the Action Plan and computes evidence from data.
+## 📁 Project Structure
 
-## Interview guide
-- **Design:** one filtered list drives every widget, so numbers always agree. No hardcoded results.
-- **Data:** 55 unique 1-star reviews from screenshots (3 duplicates removed). Categories are my judgment, unverified.
-- **Findings (computed live):** authentication/OTP/logout dominates the sample; booking/no-show errors are fewer but higher severity (salary deductions); support gaps compound other issues.
-- **Limits:** 1-star-only sample, so avg is 1.00 and says nothing about the 4.6★ overall; no positive reviews captured; can't separate app bugs from operations; root causes unverified.
-- **Recommendations:** hypotheses, priority provisional, validated with internal metrics (see Monitoring page).
+```
+├── index.html        # Layout and five pages
+├── styles.css        # Theme variables (light/dark), responsive layout
+├── app.js            # All logic in one file — easy to walk through
+├── reviews.json      # Dataset: meta, categories, reviews
+├── build_data.py     # Optional helper to regenerate the JSON
+└── README.md
+```
+
+---
+
+## ✨ Features
+
+| Feature | Details |
+|---|---|
+| **Dashboard** | 4 KPIs · star chart · category breakdown · monthly trend · sentiment doughnut |
+| **Review Explorer** | Paginated table · click any row for full detail dialog |
+| **Filters** | Search text · star rating · category · date range · reset |
+| **CSV Export** | Downloads the current filtered view |
+| **Action Plan** | 5 provisional recommendations with live evidence counts |
+| **Monitoring** | 10 metrics table + suggested workflow |
+| **Dark mode** | Toggled in the sidebar, persisted via `localStorage` |
+
+> The trend chart only renders when the filtered data spans **≥ 3 months**.
+
+---
+
+## ➕ Adding Reviews
+
+Append an object to the `reviews` array in `reviews.json`:
+
+```json
+{
+  "id": "R056",
+  "date": "YYYY-MM-DD",
+  "stars": 1,
+  "text": "...",
+  "primaryCategory": "<exact category name>",
+  "secondaryTags": [],
+  "severity": "Low|Medium|High",
+  "source": "Google Play screenshot",
+  "verified": false,
+  "complete": true
+}
+```
+
+- Add new categories to the `categories` array — filters and charts pick them up automatically.
+- Use `"complete": false` when text is cut off in a screenshot. Never silently paraphrase.
+
+---
+
+## 🌐 Deploy to GitHub Pages
+
+1. Create a repo and push this folder (`index.html` at the root).
+2. **Settings → Pages → Source:** *Deploy from a branch* → `main` / `(root)` → Save.
+3. Your dashboard will be live at `https://<your-username>.github.io/<repo-name>/` within about a minute.
+
+---
+
+## 🧩 Code Map (`app.js`)
+
+| Function | What it does |
+|---|---|
+| `init()` | Wires up listeners, renders static pages, calls `render()` |
+| `showPage(p)` | Switches the visible page and updates nav state |
+| `getFiltered()` | Applies every active filter to the full dataset |
+| `render()` | Calls `renderKPIs`, `renderCharts`, `renderTable` with filtered results |
+| `count(arr, fn)` | Groups items for chart data |
+| `makeChart(id, cfg)` | Safely destroys and redraws a Chart.js instance |
+| `openDetails(id)` | Shows the full review in a `<dialog>` |
+| `exportCSV()` | Downloads filtered rows as a `.csv` |
+| `renderRecs()` | Builds the Action Plan with live evidence counts from data |
+
+---
+
+## 🎤 Interview Notes
+
+**Architecture**  
+One `getFiltered()` call drives every widget — KPIs, charts, and the table always agree. No hardcoded numbers anywhere.
+
+**Dataset**  
+55 unique 1-star reviews collected manually from Google Play screenshots. Categories are a judgment call, assisted by AI, and marked `"verified": false` until independently confirmed.
+
+**Key findings** *(computed live from the data)*
+
+- **Authentication / OTP / logout** dominates the sample — largest single cluster.
+- **Booking & no-show errors** are fewer but carry higher severity (financial penalty: salary deductions).
+- **Support gaps** compound other issues — users can't escalate when things go wrong.
+
+**Limits**
+
+- 1-star-only sample → average rating of 1.00 says nothing about the 4.6★ overall Play Store rating.
+- No positive reviews captured; distribution is intentionally skewed toward complaints.
+- Cannot separate app-side bugs from transport-operations failures (driver behaviour, vendor management).
+- Root causes are unverified hypotheses — internal metrics are needed to confirm them.
+
+**Recommendations**  
+All priorities are provisional. See the **Monitoring** page for the metrics that would validate each fix.
+
+---
+
+## ⚠️ Methodology Disclaimer
+
+This dataset is a **manually collected, 1-star-only sample** from public Google Play screenshots. It has strong selection bias and cannot represent the experience of all MoveInSync users. Statistics in this dashboard describe complaints, not overall satisfaction. The 4.6★ Play Store rating and this sample's figures are not comparable.
