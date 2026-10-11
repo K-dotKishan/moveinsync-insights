@@ -1,0 +1,760 @@
+{
+ "meta": {
+  "collectedOn": "2026-10-11",
+  "source": "Manually captured Google Play screenshots (Most relevant, 1-star filter, Phone)",
+  "playStoreOverallRating": 4.6,
+  "playStoreRatingNote": "4.6 as displayed on the listing in the screenshots; the number of ratings was not captured.",
+  "notes": "Reviewer names omitted. 'verified' is false until a human confirms the category. 'complete' is false when the screenshot cut the review off."
+ },
+ "categories": [
+  {
+   "name": "Authentication & Session Management",
+   "action": "Investigate session expiry, token refresh and OTP delivery; improve error messages and recovery."
+  },
+  {
+   "name": "Booking & No-Show Errors",
+   "action": "Audit booking vs assignment vs no-show records; make date, shift and status unmistakable."
+  },
+  {
+   "name": "GPS, Tracking & ETA",
+   "action": "Flag stale location updates, show last-refreshed time, improve ETA accuracy."
+  },
+  {
+   "name": "Cab Allocation & Pickup",
+   "action": "Review allocation latency and driver-call workflow; clarify pickup instructions."
+  },
+  {
+   "name": "App Performance & Usability",
+   "action": "Measure startup time, API latency and crash rate; simplify repeated prompts and flows."
+  },
+  {
+   "name": "Notifications & Check-In",
+   "action": "Add pickup-point and check-in reminders; monitor notification delivery."
+  },
+  {
+   "name": "Customer Support",
+   "action": "Provide ticket reference, status and escalation path; improve helpdesk reachability."
+  },
+  {
+   "name": "Other / General Service",
+   "action": "Manually review; likely transport-operations or vendor management, not an app defect."
+  }
+ ],
+ "reviews": [
+  {
+   "id": "R001",
+   "date": "2026-06-29",
+   "stars": 1,
+   "text": "I had a suggestion to add a smart notification feature to remind the user for check-in after the vehicle crosses their pickup point. Sometimes, the vehicle arrives late or we miss by mistake to check-in, then we are marked as \"No show\" and it comes as a surprise. Introducing this one feature will help a lot for both transportation and end users. This may sound silly but even a small thing matters a lot.",
+   "primaryCategory": "Notifications & Check-In",
+   "secondaryTags": [
+    "Booking & No-Show Errors"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R002",
+   "date": "2026-07-07",
+   "stars": 1,
+   "text": "The recent updates in the UI have made the app very difficult to use. Booking a shuttle is now a 2 step process previously it used to be 1. I got confused and thought I had booked a cab while I hadn't. Was too late in realising that. Such major changes need to be released in a better way rather than just throwing them in the user's face. Another bad thing is even though I am in 1 cab but I can see all the ones available for that time. I don't need to see others, just show me mine.",
+   "primaryCategory": "Booking & No-Show Errors",
+   "secondaryTags": [
+    "App Performance & Usability"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R003",
+   "date": "2026-07-01",
+   "stars": 1,
+   "text": "The GPS tracking system is very slow, and the pickup and drop timings are frequently incorrect. Additionally, the live location of other users is often not visible. Due to these issues, we are unable to determine the correct vehicle location, which is causing inconvenience. Kindly investigate and resolve",
+   "primaryCategory": "GPS, Tracking & ETA",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R004",
+   "date": "2025-09-10",
+   "stars": 1,
+   "text": "The app frequently crashes or hangs while booking cabs, which makes it really frustrating, especially when I'm in a hurry. The GPS tracking is unreliable—it often shows the driver in the wrong location, causing unnecessary delays. Notifications are delayed or sometimes don't come at all, so I end up missing important updates about my ride.",
+   "primaryCategory": "App Performance & Usability",
+   "secondaryTags": [
+    "GPS, Tracking & ETA",
+    "Notifications & Check-In"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R005",
+   "date": "2019-11-25",
+   "stars": 1,
+   "text": "Every now and then i receive notifications saying that I have an older version in my mobile and reminds me to update it to the latest version. When I open playstore to upgrade the same, i would already been using the latest one. Further, when i try to track the vehicle, app doesn't work 100% as it seldom updates the location and all of a sudden the cab location changes by miles. Also, 9 out of 10 times it wouldn't connect to the driver and always has issues reaching them through app dialing.",
+   "primaryCategory": "GPS, Tracking & ETA",
+   "secondaryTags": [
+    "Customer Support",
+    "App Performance & Usability"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R006",
+   "date": "2026-06-19",
+   "stars": 1,
+   "text": "I am extremely frustrated with this app. Booking transport has become unnecessarily difficult because even when I carefully select specific dates, the system ends up creating bookings for completely different dates.To make matters worse, I was reported as a \"No Show\" despite having made a booking. What is even more confusing is that I then received a notification asking me to rate the trip, yet the system claims I never showed up. How does that make any sense? Fees will be deducted from my salary",
+   "primaryCategory": "Booking & No-Show Errors",
+   "secondaryTags": [
+    "Customer Support"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R007",
+   "date": "2026-05-13",
+   "stars": 1,
+   "text": "Keeps logging out after every 5 to 10 mins of inactivity on the app. Logging in again requires authentication via company's app which is time consuming. Also this poses a problem especially for female passengers who want to report something urgently or send an SOS but are force logged out and have to do the whole long procedure of logging in",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R008",
+   "date": "2026-04-17",
+   "stars": 1,
+   "text": "it's bad. Sometimes the scan doesn't work, sometimes you can't sign out. it keeps on loading but never does the check in or check-out.. it's bad.",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "App Performance & Usability"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R009",
+   "date": "2026-06-11",
+   "stars": 1,
+   "text": "This app doesn't work properly. it always shows 'SESSION EXPIRED. YOU ARE UNAUTHORISED. going back in 2seconds'. No location is suggested in the search.",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R010",
+   "date": "2026-07-22",
+   "stars": 1,
+   "text": "every time it requires login... why can't you keep us logged in. This is too annoying when we have to wait for OTP",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R011",
+   "date": "2026-05-17",
+   "stars": 1,
+   "text": "Very slow, timetaking and does not support fingerprint login, also it does not save login info",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "App Performance & Usability"
+   ],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R012",
+   "date": "2026-05-28",
+   "stars": 1,
+   "text": "not getting the otp to login. i mailed their customer support team multiple times but still no response. very disappointed",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "Customer Support"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R013",
+   "date": "2026-05-05",
+   "stars": 1,
+   "text": "Unable to sign in tried using a phone number and via email, both are not working. not received otp on any of them",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R014",
+   "date": "2026-06-02",
+   "stars": 1,
+   "text": "wasted app email otp system don't work everyday have to login via otp don't know why and how created this application. so frustrating to use this app",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R015",
+   "date": "2026-02-25",
+   "stars": 1,
+   "text": "every time after opening app it's required log in and OTP sign in, It's not banking app, once we have log in the app, it should be signed in by default till we log out, just like teams, Outlook, banking apps, social media apps etc, this is not so much confidencial then Outlook and teams, Log in must be remembered by default in system",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R016",
+   "date": "2026-02-12",
+   "stars": 1,
+   "text": "The application is very slow. Every time I open it, I have to check two agreements, and sometimes the button to accept doesn't even appear. Isn't it enough to accept when the agreement changes? Why do we",
+   "primaryCategory": "App Performance & Usability",
+   "secondaryTags": [
+    "Authentication & Session Management"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R017",
+   "date": "2026-08-29",
+   "stars": 1,
+   "text": "Always help desk number is not reachable and for updating the mobile number is also not available and for adhoc cab booking also not available via movei n syn app",
+   "primaryCategory": "Customer Support",
+   "secondaryTags": [
+    "Authentication & Session Management",
+    "Booking & No-Show Errors"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R018",
+   "date": "2026-05-10",
+   "stars": 1,
+   "text": "takes forever to verify via number and email,way too many glitches!",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R019",
+   "date": "2026-06-17",
+   "stars": 1,
+   "text": "what type of app is this... I'm not getting otp for log in whether it's Mail or phone.",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R020",
+   "date": "2026-08-05",
+   "stars": 1,
+   "text": "worst app, they mark my no show for no reason.",
+   "primaryCategory": "Booking & No-Show Errors",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R021",
+   "date": "2026-05-10",
+   "stars": 1,
+   "text": "Logout frequently which is a irritating feature. make it should login atleast 5 days once login and also selection of AM & PM is creating confusion",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "Booking & No-Show Errors"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R022",
+   "date": "2026-09-11",
+   "stars": 1,
+   "text": "I'm not able to login as it was automatically logged out and no otp received with registered mobile number and no one is helping me",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "Customer Support"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R023",
+   "date": "2026-09-02",
+   "stars": 1,
+   "text": "I couldn't able to access not even getting otp",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R024",
+   "date": "2026-05-05",
+   "stars": 1,
+   "text": "otp not coming whenever i tried to.. login otp never come kindly resolve this issue",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R025",
+   "date": "2026-06-16",
+   "stars": 1,
+   "text": "it is logouting sometimes and also it not getting login with phone number only with mail only it is logging",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R026",
+   "date": "2026-08-02",
+   "stars": 1,
+   "text": "Worst management ever daily I get late 1 hour will you pay for my time? joking with us I am gonna rate you the negative with other account as well",
+   "primaryCategory": "Cab Allocation & Pickup",
+   "secondaryTags": [
+    "Other / General Service"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R027",
+   "date": "2026-04-27",
+   "stars": 1,
+   "text": "can't even register, otp function down",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R028",
+   "date": "2026-06-18",
+   "stars": 1,
+   "text": "SAP employee, got logged out and now shows web login error, not able to book vehicle since one week",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "Booking & No-Show Errors"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R029",
+   "date": "2026-02-01",
+   "stars": 1,
+   "text": "why does it keep showing terms and agreements every time on the launch.. have accepted it multiple times but no good",
+   "primaryCategory": "App Performance & Usability",
+   "secondaryTags": [],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R030",
+   "date": "2026-05-19",
+   "stars": 1,
+   "text": "I am not able to login what is going wrong, where am I wrong please help me out",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R031",
+   "date": "2026-04-02",
+   "stars": 1,
+   "text": "the app is giving sign in error and unable to sign in with work email.",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R032",
+   "date": "2025-12-09",
+   "stars": 1,
+   "text": "app log out automatically sometimes. have bad support system disconnect in between call.",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "Customer Support"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R033",
+   "date": "2026-02-20",
+   "stars": 1,
+   "text": "worst app after update it's showing validate identity each and every time so please solve the problem as soon as possible",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R034",
+   "date": "2026-02-03",
+   "stars": 1,
+   "text": "worst app. always asking to login. We can't track the location. Bakwas App",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "GPS, Tracking & ETA"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R035",
+   "date": "2026-01-05",
+   "stars": 1,
+   "text": "worst app as the driver without informing marked as no show",
+   "primaryCategory": "Booking & No-Show Errors",
+   "secondaryTags": [
+    "Notifications & Check-In"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R036",
+   "date": "2026-02-25",
+   "stars": 1,
+   "text": "continuously logging off automatically make frustrated.",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R037",
+   "date": "2026-06-03",
+   "stars": 1,
+   "text": "Didn't get any otp to login",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R038",
+   "date": "2026-05-03",
+   "stars": 1,
+   "text": "need to login each time to book my cab since the app is not loading properly",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [
+    "App Performance & Usability"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R039",
+   "date": "2026-06-10",
+   "stars": 1,
+   "text": "keeps logging out. worst experience.",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R040",
+   "date": "2026-04-21",
+   "stars": 1,
+   "text": "Cannot get verified because otp isn't sent",
+   "primaryCategory": "Authentication & Session Management",
+   "secondaryTags": [],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R041",
+   "date": "2026-06-29",
+   "stars": 1,
+   "text": "not good , drivers use no show arbitrary. no prop[er] support from logistics team. [partly hidden by an on-screen overlay in the screenshot]",
+   "primaryCategory": "Customer Support",
+   "secondaryTags": [
+    "Booking & No-Show Errors"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R042",
+   "date": "2026-09-18",
+   "stars": 1,
+   "text": "first if the all the app itself is garbage , would crash after every 20days. Then the service , I dont know why companies even go with these retarded service , no ethics and no responsibility at all. Companies should absolutely avoid",
+   "primaryCategory": "App Performance & Usability",
+   "secondaryTags": [
+    "Other / General Service"
+   ],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R043",
+   "date": "2026-06-22",
+   "stars": 1,
+   "text": "What's the use of help desk when it's always busy",
+   "primaryCategory": "Customer Support",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R044",
+   "date": "2026-09-03",
+   "stars": 1,
+   "text": "no option to contact help desk",
+   "primaryCategory": "Customer Support",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R045",
+   "date": "2025-12-09",
+   "stars": 1,
+   "text": "Pathetic app. My office is using their service and driver doesn't come on time for pickup. Most of the time driver doesn't pick the call. Their customer care [text cut off in screenshot]",
+   "primaryCategory": "Cab Allocation & Pickup",
+   "secondaryTags": [
+    "Customer Support"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R046",
+   "date": "2026-06-19",
+   "stars": 1,
+   "text": "very poor service, cab allocation is getting delayed on an everyday basis, very unprofessional",
+   "primaryCategory": "Cab Allocation & Pickup",
+   "secondaryTags": [],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R047",
+   "date": "2026-08-22",
+   "stars": 1,
+   "text": "The service is absolutely terrible, extremelypoor... They only care about the money.",
+   "primaryCategory": "Other / General Service",
+   "secondaryTags": [],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R048",
+   "date": "2026-04-22",
+   "stars": 1,
+   "text": "very poor experience, not even single time I get the good response from so called saheta team, very poor clubbing of employees really frustrated",
+   "primaryCategory": "Customer Support",
+   "secondaryTags": [
+    "Cab Allocation & Pickup"
+   ],
+   "severity": "Medium",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R049",
+   "date": "2026-09-03",
+   "stars": 1,
+   "text": "The worst service as well as the worst app. [text may continue beyond screenshot]",
+   "primaryCategory": "Other / General Service",
+   "secondaryTags": [],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R050",
+   "date": "2026-04-28",
+   "stars": 1,
+   "text": "worst possible cab services ever both transport and apps are useless",
+   "primaryCategory": "Other / General Service",
+   "secondaryTags": [],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R051",
+   "date": "2026-08-19",
+   "stars": 1,
+   "text": "most teribe service no customer support and no safety .. worst cab providers no credebility and worst drivers onboarded",
+   "primaryCategory": "Customer Support",
+   "secondaryTags": [
+    "Other / General Service"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R052",
+   "date": "2026-08-29",
+   "stars": 1,
+   "text": "super bad service with bad transport management. Company should release these transport vendors. [text may continue beyond screenshot]",
+   "primaryCategory": "Other / General Service",
+   "secondaryTags": [],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": false
+  },
+  {
+   "id": "R053",
+   "date": "2026-08-15",
+   "stars": 1,
+   "text": "one of the worst services drivers don't know how to behave with employees and movein sync won't train them as well very worst service travel world is best",
+   "primaryCategory": "Other / General Service",
+   "secondaryTags": [
+    "Cab Allocation & Pickup"
+   ],
+   "severity": "Low",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R054",
+   "date": "2026-01-02",
+   "stars": 1,
+   "text": "Worst App.I am unable to book the seat because Book now button itself disabled even after filling mandatory details and raised a big with screenshot but No response from the app support team. I am an Indegene employee",
+   "primaryCategory": "Booking & No-Show Errors",
+   "secondaryTags": [
+    "Customer Support"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  },
+  {
+   "id": "R055",
+   "date": "2025-12-08",
+   "stars": 1,
+   "text": "very bad app . it was showing me to cancel whole booking I cancelled it on Friday.now I called transport they are very rudely telling that I didn't cancel before cut off so it didn't cancel.however the app showed me whole booking is cancelled",
+   "primaryCategory": "Booking & No-Show Errors",
+   "secondaryTags": [
+    "Customer Support"
+   ],
+   "severity": "High",
+   "source": "Google Play screenshot",
+   "verified": false,
+   "complete": true
+  }
+ ]
+}

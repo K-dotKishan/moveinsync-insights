@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoveInSync Insights</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><strong>MoveInSync Insights</strong><small>Employee Commute Experience &amp; Review Intelligence</small></div>
+  <nav aria-label="Main">
+    <button data-page="dashboard" class="active">Dashboard</button>
+    <button data-page="explorer">Review Explorer</button>
+    <button data-page="plan">Action Plan</button>
+    <button data-page="monitoring">Monitoring</button>
+    <button data-page="about">About This Analysis</button>
+  </nav>
+  <button id="themeBtn" class="ghost" aria-label="Toggle dark mode">Toggle dark mode</button>
+</aside>
+<main>
+  <button id="menuBtn" class="ghost menu" aria-label="Menu">☰ Menu</button>
+  <div id="err" class="banner warn" hidden>Could not load the reviews data file. Browsers block local file access when opening index.html directly. Run VS Code Live Server or <code>python -m http.server</code> in this folder.</div>
+
+  <!-- Filters (shared by dashboard + explorer) -->
+  <section id="filters" class="card filters" aria-label="Filters">
+    <label>Search<input id="fQ" type="search" placeholder="Search review text"></label>
+    <label>Stars<select id="fStars"><option value="all">All</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+    <label>Category<select id="fCat"><option value="all">All categories</option></select></label>
+    <label>From<input id="fFrom" type="date"></label>
+    <label>To<input id="fTo" type="date"></label>
+    <button id="resetBtn" class="ghost">Reset filters</button>
+    <button id="csvBtn">Export CSV</button>
+  </section>
+
+  <section id="page-dashboard" class="page">
+    <h1>Dashboard</h1>
+    <div class="banner" id="sampleNote"></div>
+    <div class="kpis" id="kpis"></div>
+    <div class="grid">
+      <div class="card"><h2>Reviews by star rating</h2><div class="chart-wrap"><canvas id="cStars"></canvas></div></div>
+      <div class="card"><h2>Primary issue category</h2><div class="chart-wrap tall"><canvas id="cCats"></canvas></div></div>
+      <div class="card"><h2>Volume &amp; average rating by month</h2><div class="chart-wrap"><canvas id="cTrend"></canvas></div><p id="trendNote" class="muted"></p></div>
+      <div class="card"><h2>Positive / neutral / negative</h2><div class="chart-wrap"><canvas id="cSent"></canvas></div></div>
+    </div>
+  </section>
+
+  <section id="page-explorer" class="page" hidden>
+    <h1>Review Explorer</h1>
+    <div class="card tablewrap"><table>
+      <thead><tr><th>Date</th><th>Stars</th><th>Review</th><th>Category</th><th>Severity</th><th>Suggested action</th></tr></thead>
+      <tbody id="rows"></tbody></table></div>
+    <div class="pager"><button id="prev" class="ghost">Previous</button><span id="pageInfo"></span><button id="next" class="ghost">Next</button></div>
+  </section>
+
+  <section id="page-plan" class="page" hidden>
+    <h1>Action Plan</h1>
+    <div class="banner warn">Priorities are <strong>provisional</strong>. These are hypotheses from public reviews, not verified technical root causes. Evidence counts are calculated live from the loaded dataset.</div>
+    <div id="recs"></div>
+  </section>
+
+  <section id="page-monitoring" class="page" hidden>
+    <h1>Impact &amp; Monitoring</h1>
+    <div class="banner">No baseline values are shown: they need MoveInSync's internal data. No rating increase is promised.</div>
+    <div class="card tablewrap"><table><thead><tr><th>Metric</th><th>What it measures</th><th>Why it matters</th></tr></thead><tbody id="metrics"></tbody></table></div>
+    <div class="card"><h2>Monitoring workflow</h2><ol id="workflow"></ol></div>
+  </section>
+
+  <section id="page-about" class="page" hidden>
+    <h1>About This Analysis</h1>
+    <div class="card prose" id="aboutBody"></div>
+  </section>
+</main>
+
+<dialog id="dlg"><div id="dlgBody"></div><button id="dlgClose">Close</button></dialog>
+<script src="app.js"></script>
+</body>
+</html>
