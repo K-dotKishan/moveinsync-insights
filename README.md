@@ -22,7 +22,8 @@
 ├── index.html        # Layout and five pages
 ├── styles.css        # Theme variables (light/dark), responsive layout
 ├── app.js            # All logic in one file — easy to walk through
-├── reviews.json      # Dataset: meta, categories, reviews
+├── reviews_expanded.json # Primary dataset: meta, categories, reviews (expanded)
+├── reviews.json      # Original 55-review screenshot dataset (fallback)
 ├── build_data.py     # Optional helper to regenerate the JSON
 └── README.md
 ```
@@ -34,7 +35,7 @@
 | Feature | Details |
 |---|---|
 | **Dashboard** | 4 KPIs · star chart · category breakdown · monthly trend · sentiment doughnut |
-| **Review Explorer** | Paginated table · click any row for full detail dialog |
+| **Review Expanded** | Paginated table · click any row for full detail dialog |
 | **Filters** | Search text · star rating · category · date range · reset |
 | **CSV Export** | Downloads the current filtered view |
 | **Action Plan** | 5 provisional recommendations with live evidence counts |
@@ -47,7 +48,7 @@
 
 ## ➕ Adding Reviews
 
-Append an object to the `reviews` array in `reviews.json`:
+Append an object to the `reviews` array in `reviews_expanded.json`:
 
 ```json
 {

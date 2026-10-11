@@ -11,7 +11,7 @@
   <div class="brand"><strong>MoveInSync Insights</strong><small>Employee Commute Experience &amp; Review Intelligence</small></div>
   <nav aria-label="Main">
     <button data-page="dashboard" class="active">Dashboard</button>
-    <button data-page="explorer">Review Explorer</button>
+    <button data-page="explorer">Review Expanded</button>
     <button data-page="plan">Action Plan</button>
     <button data-page="monitoring">Monitoring</button>
     <button data-page="about">About This Analysis</button>
@@ -25,7 +25,7 @@
   <!-- Filters (shared by dashboard + explorer) -->
   <section id="filters" class="card filters" aria-label="Filters">
     <label>Search<input id="fQ" type="search" placeholder="Search review text"></label>
-    <label>Stars<select id="fStars"><option value="all">All</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+    <label>Stars<select id="fStars"><option value="all">All stars</option><option value="1">1★</option><option value="2">2★</option><option value="3">3★</option><option value="4">4★</option><option value="5">5★</option></select></label>
     <label>Category<select id="fCat"><option value="all">All categories</option></select></label>
     <label>From<input id="fFrom" type="date"></label>
     <label>To<input id="fTo" type="date"></label>
@@ -46,7 +46,7 @@
   </section>
 
   <section id="page-explorer" class="page" hidden>
-    <h1>Review Explorer</h1>
+    <h1>Review Expanded</h1>
     <div class="card tablewrap"><table>
       <thead><tr><th>Date</th><th>Stars</th><th>Review</th><th>Category</th><th>Severity</th><th>Suggested action</th></tr></thead>
       <tbody id="rows"></tbody></table></div>

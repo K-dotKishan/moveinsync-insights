@@ -7,7 +7,7 @@ const state = {q:'', stars:'all', cat:'all', from:'', to:'', page:1};
 const PAGE_SIZE = 10;
 
 const loadData = () => {
-  const candidates = ['reviews.json', 'data/reviews.json'];
+  const candidates = ['reviews_expanded.json', 'reviews.json', 'data/reviews.json'];
   return Promise.any(candidates.map(path => fetch(path).then(r => {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
@@ -25,6 +25,9 @@ loadData().then(d => {
 
 function init() {
   $('#fCat').innerHTML += DATA.categories.map(c => `<option>${esc(c.name)}</option>`).join('');
+  // Hard-reset all filter controls on load so browser form-restore can't leave a stale value.
+  $('#fStars').value = 'all'; $('#fCat').value = 'all';
+  $('#fQ').value = ''; $('#fFrom').value = ''; $('#fTo').value = '';
   // Any filter control: update state, go back to page 1, re-render.
   [['#fQ','q'],['#fStars','stars'],['#fCat','cat'],['#fFrom','from'],['#fTo','to']].forEach(([sel,key]) =>
     $(sel).addEventListener('input', e => { state[key] = e.target.value; state.page = 1; render(); }));
